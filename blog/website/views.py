@@ -17,9 +17,21 @@ def hello_blog(request):
 
     return render(request, 'index.html', data)
 
-def post_detail(request, id):
+def index(request, id):
     post = Post.objects.get(id=id)
-    return render(request, 'post_detail.html', {'post': post})
+    return render(request, 'index.html', {'post': post})
+
+def contato(request, id):
+    post = Post.objects.get(id=id)
+    return render(request, 'contato.html', {'post': post})
+
+def duvidas(request, id):
+    post = Post.objects.get(id=id)
+    return render(request, 'duvidas.html', {'post': post})
+
+def planos(request, id):
+    post = Post.objects.get(id=id)
+    return render(request, 'planos.html', {'post': post})
 
 def save_form(request):
     name = request.POST['name']
