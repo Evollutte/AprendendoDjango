@@ -18,8 +18,9 @@
 		<script src="{% static 'assets/js/skel.min.js' %"></script>
 		<script src="{% static 'assets/js/skel-layers.min.js' %"></script>
 		<script src="{% static 'assets/js/init.js' %"></script>
-		<link rel="stylesheet" href="{% static 'assets/css/skel.css' %" />
-		<link rel="stylesheet" href="{% static 'assets/css/style.css' %" />
+			<link rel="stylesheet" href="{% static 'assets/css/skel.css' %" />
+			<link rel="stylesheet" href="{% static 'assets/css/style.css' %" />
+		</noscript>
 		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
 	</head>
 	<body class="homepage">
@@ -34,10 +35,10 @@
 					<!-- Nav -->
 						<nav id="nav">
 							<ul>
-								<li><a href="index.html">Home</a></li>
-								<li><a href="planos.html">Planos</a></li>
-								<li><a href="contato.html">Contato</a></li>
-								<li><a href="duvidas.html">Dúvidas</a></li>
+								<li><a href="{% 'index.html' %}">Home</a></li>
+								<li><a href="{% 'planos.html' %}">Planos</a></li>
+								<li><a href="{% 'contato.html' %}">Contato</a></li>
+								<li><a href="{% 'duvidas.html' %}">Dúvidas</a></li>
 							</ul>
 						</nav>
 
