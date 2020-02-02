@@ -17,14 +17,6 @@ def index(request):
 
     return render(request, 'index.html', data)
 
-def contato(request, id):
-    post = Post.objects.get(id=id)
-    return render(request, 'contato.html', {'post': post})
-
-def duvidas(request, id):
-    post = Post.objects.get(id=id)
-    return render(request, 'duvidas.html', {'post': post})
-
 def planos(request, id):
     post = Post.objects.get(id=id)
     return render(request, 'planos.html', {'post': post})
