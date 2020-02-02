@@ -2,7 +2,7 @@ from django.shortcuts import render
 from .models import Post, Contact
 
 
-def hello_blog(request):
+def index(request):
     lista = [
         'Django', 'Python', 'Git', 'Html', 
         'Banco de dados', 'Linux', 'Nginx', 'Uwsgi',
@@ -16,10 +16,6 @@ def hello_blog(request):
         'posts': list_posts }
 
     return render(request, 'index.html', data)
-
-def index(request, id):
-    post = Post.objects.get(id=id)
-    return render(request, 'index.html', {'post': post})
 
 def contato(request, id):
     post = Post.objects.get(id=id)
