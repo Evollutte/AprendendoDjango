@@ -1,10 +1,9 @@
 from django.urls import path, include
-from .views import index
-from .views import contato, duvidas, planos
+from .views import hello_blog
+from .views import post_detail, save_form
 
 urlpatterns = [
-    path('', index, name='home_blog'),
-    path('post/<int:id>/', contato, name='contato'),
-    path('post/<int:id>/', duvidas, name='duvidas'),
-    path('post/<int:id>/', planos, name='planos'),
+    path('', hello_blog, name='home_blog'),
+    path('post/<int:id>/', post_detail, name='post_detail'),
+    path('save-form/', save_form, name='save_form'),
 ]
